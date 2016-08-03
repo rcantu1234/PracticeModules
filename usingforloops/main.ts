@@ -7,7 +7,7 @@ for (let value of animals) {
 
 // FOR IN LOOP
 for (let key in animals) {
-  console.log(animals[key];
+  console.log(animals[key]);
   }
 
 // FOR LOOP
