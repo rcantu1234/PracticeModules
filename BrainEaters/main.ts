@@ -104,6 +104,10 @@ document.addEventListener("keydown", function(e) {
     img1.src = "avatar.png";
     context.translate(5, 0);
     context.drawImage(img1, pos1x, pos1y);
+    if (pos1x > 60) {
+       pos1x = pos1x;
+
+    }
 
   }
 
