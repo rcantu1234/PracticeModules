@@ -66,25 +66,33 @@ document.addEventListener("keydown", function (e) {
     console.log(keycode);
     if (keycode === 39) {
         img1.src = "avatar.png";
-        context.translate(5, 0);
+        context.fillStyle = "white";
+        context.fillRect(pos1x, pos1y, 28, 70);
+        pos1x += 5;
         context.drawImage(img1, pos1x, pos1y);
-        if (pos1x > 60) {
-            pos1x = pos1x;
+        if ((pos1x + 5) >= 722) {
+            pos1x++;
         }
     }
     if (keycode === 37) {
         img1.src = "avatar.png";
-        context.translate(-5, 0);
+        context.fillStyle = "white";
+        context.fillRect(pos1x, pos1y, 28, 70);
+        pos1x += -5;
         context.drawImage(img1, pos1x, pos1y);
     }
     if (keycode === 40) {
         img1.src = "avatar.png";
-        context.translate(0, 5);
+        context.fillStyle = "white";
+        context.fillRect(pos1x, pos1y, 28, 70);
+        pos1y += 5;
         context.drawImage(img1, pos1x, pos1y);
-    }
-    if (keycode === 38) {
-        img1.src = "avatar.png";
-        context.translate(0, -5);
-        context.drawImage(img1, pos1x, pos1y);
+        if (keycode === 38) {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 28, 70);
+            pos1y += -5;
+            context.drawImage(img1, pos1x, pos1y);
+        }
     }
 });
