@@ -11,11 +11,11 @@ context.fillRect(mo11, 95, 40, 55);
 console.log(mo11);
 var mo12 = 283 + (Math.floor(Math.random() * 194));
 context.fillStyle = "white";
-context.fillRect(mo12, 25, 40, 55);
+context.fillRect(mo12, 95, 40, 55);
 console.log(mo12);
 var mo13 = 516 + (Math.floor(Math.random() * 195));
 context.fillStyle = "white";
-context.fillRect(mo13, 25, 40, 55);
+context.fillRect(mo13, 95, 40, 55);
 console.log(mo13);
 var mo21 = 50 + (Math.floor(Math.random() * 194));
 context.fillStyle = "white";
@@ -65,33 +65,60 @@ document.addEventListener("keydown", function (e) {
     var keycode = e.keyCode;
     console.log(keycode);
     if (keycode === 39) {
-        img1.src = "avatar.png";
-        context.fillStyle = "white";
-        context.fillRect(pos1x, pos1y, 28, 70);
-        pos1x += 5;
-        context.drawImage(img1, pos1x, pos1y);
-        if ((pos1x + 5) >= 722) {
+        if (pos1x + 5 >= 722) {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 0, 0);
+        }
+        else {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 28, 70);
+            pos1x += 5;
+            context.drawImage(img1, pos1x, pos1y);
             pos1x++;
         }
     }
     if (keycode === 37) {
-        img1.src = "avatar.png";
-        context.fillStyle = "white";
-        context.fillRect(pos1x, pos1y, 28, 70);
-        pos1x += -5;
-        context.drawImage(img1, pos1x, pos1y);
-    }
-    if (keycode === 40) {
-        img1.src = "avatar.png";
-        context.fillStyle = "white";
-        context.fillRect(pos1x, pos1y, 28, 70);
-        pos1y += 5;
-        context.drawImage(img1, pos1x, pos1y);
-        if (keycode === 38) {
+        if (pos1x + 5 <= 57) {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 0, 0);
+        }
+        else {
             img1.src = "avatar.png";
             context.fillStyle = "white";
             context.fillRect(pos1x, pos1y, 28, 70);
-            pos1y += -5;
+            pos1x += -5;
+            context.drawImage(img1, pos1x, pos1y);
+        }
+    }
+    if (keycode === 40) {
+        if (pos1y + 5 > 400) {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 0, 0);
+        }
+        else {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 28, 70);
+            pos1y += 5;
+            context.drawImage(img1, pos1x, pos1y);
+        }
+    }
+    if (keycode === 38) {
+        img1.src = "avatar.png";
+        if (pos1y + 5 < 35) {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 0, 0);
+        }
+        else {
+            img1.src = "avatar.png";
+            context.fillStyle = "white";
+            context.fillRect(pos1x, pos1y, 28, 70);
+            pos1y -= 5;
             context.drawImage(img1, pos1x, pos1y);
         }
     }
