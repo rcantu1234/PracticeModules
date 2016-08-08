@@ -69,13 +69,13 @@ let pos1y = 25;
 let img2 = new Image();
 img2.src = "zombie.png";
 let pos2x = 50 + (Math.floor(Math.random() * 650));
-let pos2y = 140
+let pos2y = 140;
 
 // get zombie image
 let img3 = new Image();
 img3.src = "zombie.png";
 let pos3x = 50 + (Math.floor(Math.random() * 650));
-let pos3y = 265
+let pos3y = 265;
 
 // get zombie image
 let img4 = new Image();
@@ -89,8 +89,41 @@ window.addEventListener('load', () => {
     context.drawImage(img2, pos2x, pos2y);
     context.drawImage(img3, pos3x, pos3y);
     context.drawImage(img4, pos4x, pos4y);
-});
 
+    // var interval = setInterval(function() {
+    //
+    //   let img2 = new Image();
+    //   img2.src = "zombie.png";
+    //   var x = 50 + (Math.floor(Math.random() * 650));
+    //   var y = 140;
+    //
+    //     if (x+5>=722) {
+    //       img2.src = "zombie.png";
+    //       context.fillStyle = "white";
+    //       context.fillRect(x, y, 0, 0);
+    //     } else {
+    //       img2.src = "zombie.png";
+    //       context.fillStyle = "white";
+    //       context.fillRect(x, y, 40, 70);
+    //       x += 5;
+    //       context.drawImage(img2, x, y);
+    //       x++;
+    //     }
+    //
+    //
+    //   return function () {
+    //     //context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+    //     context.drawImage(img2, x, y);
+    //
+    //     x += 1;
+    //     if (x > context.canvas.width) {
+    //       x = 0;
+    //     }
+    //   };
+    // }(), 1000/20);
+  // }), false, false;
+
+});
 // LISTENING FOR KEY PRESS
 document.addEventListener("keydown", function(e) {
   e.preventDefault();
@@ -113,6 +146,45 @@ document.addEventListener("keydown", function(e) {
       context.drawImage(img1, pos1x, pos1y);
       pos1x++;
     }
+
+    if (pos2x+5>=722) {
+      img2.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos2x, pos2y, 0, 0);
+    } else {
+      img2.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos2x, pos2y, 28, 70);
+      pos2x += 5;
+      context.drawImage(img2, pos2x, pos2y);
+      pos2x++;
+    }
+
+    if (pos3x+5>=722) {
+      img3.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos3x, pos3y, 0, 0);
+    } else {
+      img3.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos3x, pos3y, 28, 70);
+      pos3x += 5;
+      context.drawImage(img3, pos3x, pos3y);
+      pos3x++;
+    }
+
+    if (pos4x+5>=722) {
+      img4.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos4x, pos4y, 0, 0);
+    } else {
+      img4.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos4x, pos4y, 28, 70);
+      pos4x += 5;
+      context.drawImage(img4, pos4x, pos4y);
+      pos4x++;
+    }
   }
 
   // MOVE LEFT
@@ -121,13 +193,51 @@ document.addEventListener("keydown", function(e) {
       img1.src = "avatar.png";
       context.fillStyle = "white";
       context.fillRect(pos1x, pos1y, 0, 0);
-
     } else {
       img1.src = "avatar.png";
       context.fillStyle = "white";
       context.fillRect(pos1x, pos1y, 28, 70);
       pos1x += -5;
       context.drawImage(img1, pos1x, pos1y);
+    }
+
+    if (pos2x+5<=57) {
+      img2.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos2x, pos2y, 0, 0);
+    } else {
+      img2.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos2x, pos2y, 28, 70);
+      pos2x += -5;
+      context.drawImage(img2, pos2x, pos2y);
+      pos2x++;
+    }
+
+    if (pos3x+5<=57) {
+      img3.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos3x, pos3y, 0, 0);
+    } else {
+      img3.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos3x, pos3y, 28, 70);
+      pos3x += -5;
+      context.drawImage(img3, pos3x, pos3y);
+      pos3x++;
+    }
+
+    if (pos4x+5<=57) {
+      img4.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos4x, pos4y, 0, 0);
+    } else {
+      img4.src = "zombie.png";
+      context.fillStyle = "white";
+      context.fillRect(pos4x, pos4y, 28, 70);
+      pos4x += -5;
+      context.drawImage(img4, pos4x, pos4y);
+      pos4x++;
     }
   }
 

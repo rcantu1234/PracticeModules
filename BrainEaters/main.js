@@ -78,6 +78,45 @@ document.addEventListener("keydown", function (e) {
             context.drawImage(img1, pos1x, pos1y);
             pos1x++;
         }
+        if (pos2x + 5 >= 722) {
+            img2.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos2x, pos2y, 0, 0);
+        }
+        else {
+            img2.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos2x, pos2y, 28, 70);
+            pos2x += 5;
+            context.drawImage(img2, pos2x, pos2y);
+            pos2x++;
+        }
+        if (pos3x + 5 >= 722) {
+            img3.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos3x, pos3y, 0, 0);
+        }
+        else {
+            img3.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos3x, pos3y, 28, 70);
+            pos3x += 5;
+            context.drawImage(img3, pos3x, pos3y);
+            pos3x++;
+        }
+        if (pos4x + 5 >= 722) {
+            img4.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos4x, pos4y, 0, 0);
+        }
+        else {
+            img4.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos4x, pos4y, 28, 70);
+            pos4x += 5;
+            context.drawImage(img4, pos4x, pos4y);
+            pos4x++;
+        }
     }
     if (keycode === 37) {
         if (pos1x + 5 <= 57) {
@@ -91,6 +130,45 @@ document.addEventListener("keydown", function (e) {
             context.fillRect(pos1x, pos1y, 28, 70);
             pos1x += -5;
             context.drawImage(img1, pos1x, pos1y);
+        }
+        if (pos2x + 5 <= 57) {
+            img2.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos2x, pos2y, 0, 0);
+        }
+        else {
+            img2.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos2x, pos2y, 28, 70);
+            pos2x += -5;
+            context.drawImage(img2, pos2x, pos2y);
+            pos2x++;
+        }
+        if (pos3x + 5 <= 57) {
+            img3.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos3x, pos3y, 0, 0);
+        }
+        else {
+            img3.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos3x, pos3y, 28, 70);
+            pos3x += -5;
+            context.drawImage(img3, pos3x, pos3y);
+            pos3x++;
+        }
+        if (pos4x + 5 <= 57) {
+            img4.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos4x, pos4y, 0, 0);
+        }
+        else {
+            img4.src = "zombie.png";
+            context.fillStyle = "white";
+            context.fillRect(pos4x, pos4y, 28, 70);
+            pos4x += -5;
+            context.drawImage(img4, pos4x, pos4y);
+            pos4x++;
         }
     }
     if (keycode === 40) {
